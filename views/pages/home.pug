@@ -1,0 +1,46 @@
+extends ../_includes/layout
+
+block variables
+  - var template = 'home'
+
+block content
+  .home 
+    .home__wrapper  
+      section.home__header
+        h1.home__title=home.data.main_title 
+
+      each section in home.data.body
+        if section.slice_type == 'intro'
+          section.home__intro
+            h2.home__intro__title1=section.primary.title1
+            h2.home__intro__title2=section.primary.title2
+            p.home__intro__desc=section.primary.description
+            figure.home__intro__media
+              img.home__intro__media__image(src=section.primary.image.url alt=section.primary.image.alt)
+        
+        if section.slice_type == 'content'
+          section.home__content 
+            h2.home__content__title1=section.primary.title1
+            h2.home__content__title2=section.primary.title2
+            each media in section.items 
+              figure.home__content__media
+                img.home__content__media__image(src=media.image.url, alt=media.image.alt)
+          
+        if section.slice_type == 'highlights'
+          section.home__highlights 
+            h2.home__highlights__title=section.primary.title
+            .home__highlights__content 
+            each content in section.items 
+              h3.home__highlights__subtitle=content.subtitle
+              p.home__highlights__desc=content.description
+
+        if section.slice_type == 'components'
+          section.home__components 
+            a.home__components__enter(href="#")=section.primary.enter
+            a.home__components__emerge(href="#")=section.primary.emerge
+            p.home__components__text=section.primary.text
+
+        if section.slice_type == 'footer'
+          section.home__footer 
+            each link in section.items 
+              a.home__footer__link(href="#")=link.text

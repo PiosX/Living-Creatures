@@ -1,0 +1,69 @@
+extends ../_includes/layout
+
+block variables
+    - var template = 'twilight'
+
+block content
+  .twilight 
+    .twilight__wrapper 
+      each section in twilight.data.body 
+        if section.slice_label == 'border1'
+          section.twilight__border
+            each item in section.items
+              p.sunlight__border__text=item.text
+              p.sunlight__border__description=item.description
+
+        if section.slice_type == 'highlights'
+          section.twilight__highlights 
+            h2.twilight__highlights__title=section.primary.title
+            p.twilight__highlights__text1=section.primary.text1
+            p.twilight__highlights__text2=section.primary.text2
+
+        if section.slice_type == 'header'
+          section.twilight__header 
+            p.twilight__header__text=section.primary.text
+            h1.twilight__header__title=section.primary.title 
+            p.twilight__header__subtitle=section.primary.subtitle
+
+        if section.slice_type == 'stats'
+          section.twilight__stats 
+            p.twilight__stats__text1=section.primary.title1
+            p.twilight__stats__text2=section.primary.title2
+            p.twilight__stats__subtitle=section.primary.subtitle
+            ul.twilight__stats__dlist 
+              each item in section.items 
+                li.twilight__stats__dlist__item=item.dec
+            ul.twilight__stats__ilist 
+              each item in section.items 
+                li.twilight__stats__ilist__item=item.inc
+
+        if section.slice_type == 'content'
+          section.twilight__content
+            h2.twilight__content__title=section.primary.title
+            each media in section.items 
+              figure.twilight__content__media
+                img.twilight__content__media__image(src=media.image.url alt=media.image.alt)
+                figcaption.twilight__content__media__text=media.name
+
+        if section.slice_type == 'informations'
+          section.twilight__informations
+            h2.twilight__informations__title=section.primary.title
+            p.twilight__informations__border=section.primary.border
+            .twilight__informations__box 
+              img.twilight__informations__box__image(src=section.primary.image.url alt=section.primary.image.alt)
+              ul.twilight__informations__box__list 
+                li.twilight__informations__box__list__date=section.primary.date
+                li.twilight__informations__box__list__name=section.primary.name
+                li.twilight__informations__box__list__location=section.primary.location
+              p.twilight__informations__box__desc=section .primary.description
+
+        if section.slice_label == 'border2'
+          section.twilight__border
+            each item in section.items
+              p.sunlight__border__text=item.text
+              p.sunlight__border__description=item.description
+
+        if section.slice_type == 'footer'
+          section.twilight__footer  
+            h3.twilight__footer__title=section.primary.title
+            p.twilight__footer__subtitle=section.primary.subtitle

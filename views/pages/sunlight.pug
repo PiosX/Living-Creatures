@@ -1,0 +1,48 @@
+extends ../_includes/layout
+
+block variables
+  - var template = 'sunlight'
+
+block content
+  .sunlight 
+    .sunlight__wrapper
+      each section in sunlight.data.body
+        if section.slice_type == 'header'
+          section.sunlight__header
+            p.sunlight__header__text=section.primary.text
+            h1.sunlight__header__title=section.primary.title
+            p.sunlight__header__subtitle=section.primary.subtitle
+
+        if section.slice_type == 'highlights'
+          section.sunlight__highlights 
+            h2.sunlight__highlights=section.primary.title
+            each media in section.items 
+              figure.sunlight__highlights__media 
+                img.sunlight__highlights__media__image(src=media.image.url alt=media.image.alt)
+                figcaption.sunlight__highlights__media__text=media.text
+
+        if section.slice_type == 'content'
+          section.sunlight__content 
+            h2.sunlight__content__title=section.primary.title
+            each media in section.items 
+              figure.sunlight__content__media 
+                img.sunlight__content__media__image(src=media.image.url alt=media.image.alt)
+                figcaption.sunlight__content__media__text=media.name
+
+        if section.slice_type == 'border'
+          section.sunlight__border 
+            p.sunlight__border__text=section.primary.text
+            p.sunlight__border__description=section.primary.description
+
+        if section.slice_type == 'informations'
+          section.sunlight__informations 
+            h2.sunlight__informations__title=section.primary.title
+            h3.sunlight__informations__subtitle=section.primary.subtitle
+            .sunlight__informations__box
+              p.sunlight__informations__border=section.primary.border
+              p.sunlight__informations__description=section.primary.description
+            figure.sunlight__informations__media
+              figcaption.sunlight__informations__date=section.primary.date
+              img.sunlight__informations__image(src=section.primary.image.url alt=section.primary.image.alt)
+              figcaption.sunlight__informations__name=section.primary.name
+            p.sunlight__informations__subtext=section.primary.subtext
