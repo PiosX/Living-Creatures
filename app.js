@@ -57,8 +57,8 @@ const handleRequest = async (api) => {
       api.getSingle('sunlight'),
       api.getSingle('preloader'),
       api.getSingle('twiligh'),
-      // api.getSingle('midnight'),
-      // api.getSingle('abyss'),
+      api.getSingle('midnigh'),
+      api.getSingle('abyss'),
     ]);
 
   const assets = [];
@@ -102,13 +102,30 @@ const handleRequest = async (api) => {
     });
   });
 
-  // midnight.data.body.forEach((section) => {
-  //   // assets.push(item.image.url);
-  // });
+  midnight.data.body.forEach((media) => {
+    const slices = ['content', 'informations'];
+    slices.forEach((slice) => {
+      if (media.slice_type === slice) {
+        media.items.forEach((item) => {
+          assets.push(item.image.url);
+        });
+      }
+    });
+  });
 
-  // abyss.data.body.forEach((section) => {
-  //   // assets.push(item.image.url);
-  // });
+  abyss.data.body.forEach((media) => {
+    const slices = ['content'];
+    slices.forEach((slice) => {
+      if (media.slice_type === slice) {
+        media.items.forEach((item) => {
+          assets.push(item.image.url);
+        });
+      }
+      if (media.slice_type === 'informations') {
+        assets.push(media.primary.image.url);
+      }
+    });
+  });
 
   return {
     assets,
