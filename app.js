@@ -9,6 +9,8 @@ const express = require('express');
 const app = express();
 const port = process.env.PORT || 8005;
 
+app.use(express.static(path.join(__dirname, 'public')));
+
 const Prismic = require('@prismicio/client');
 const PrismicH = require('@prismicio/helpers');
 

@@ -10,8 +10,8 @@ block content
         if section.slice_label == 'border1'
           section.twilight__border
             each item in section.items
-              p.sunlight__border__text=item.text
-              p.sunlight__border__description=item.description
+              p.twilight__border__text=item.text
+              p.twilight__border__description=item.description
 
         if section.slice_type == 'highlights'
           section.twilight__highlights 
@@ -55,13 +55,13 @@ block content
                 li.twilight__informations__box__list__date=section.primary.date
                 li.twilight__informations__box__list__name=section.primary.name
                 li.twilight__informations__box__list__location=section.primary.location
-              p.twilight__informations__box__desc=section .primary.description
+              p.twilight__informations__box__desc=section.primary.description
 
         if section.slice_label == 'border2'
           section.twilight__border
             each item in section.items
-              p.sunlight__border__text=item.text
-              p.sunlight__border__description=item.description
+              p.twilight__border__text=item.text
+              p.twilight__border__description=item.description
 
         if section.slice_type == 'footer'
           section.twilight__footer  

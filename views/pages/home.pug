@@ -6,7 +6,7 @@ block variables
 block content
   .home 
     .home__wrapper  
-      section.home__header
+      section.home__header#header
         h1.home__title=home.data.main_title 
 
       each section in home.data.body
@@ -36,8 +36,8 @@ block content
 
         if section.slice_type == 'components'
           section.home__components 
-            a.home__components__enter(href="#")=section.primary.enter
-            a.home__components__emerge(href="#")=section.primary.emerge
+            a.home__components__enter(href="/sunlight")=section.primary.enter
+            a.home__components__emerge(href="#header")=section.primary.emerge
             p.home__components__text=section.primary.text
 
         if section.slice_type == 'footer'

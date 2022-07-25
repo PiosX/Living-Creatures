@@ -1,0 +1,26 @@
+@font-face {
+  font-family: $font-gotu;
+  src: url('../fonts/gotu-regular.woff2') format('woff2'),
+    url('../fonts/gotu-regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $font-redhat;
+  src: url('../fonts/red-hat-text-regular.woff2') format('woff2'),
+    url('../fonts/red-hat-text-regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: $font-redhat;
+  src: url('../fonts/red-hat-text-light.woff2') format('woff2'),
+    url('../fonts/red-hat-text-light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
