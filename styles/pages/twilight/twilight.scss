@@ -1,12 +1,35 @@
 .twilight {
-}
-.twilight__wrapper {
+  position: relative;
 }
 .twilight__header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.twilight__header__box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
 }
 .twilight__header__text {
+  position: absolute;
+  top: -5rem;
+  left: 5rem;
+  transform: translate(-50%, -50%);
+  @extend %description-24;
 }
 .twilight__header__title {
+  @extend %title-190;
+  text-align: center;
 }
 .twilight__header__subtitle {
+  position: absolute;
+  left: 25%;
+  bottom: -10rem;
+  transform: translate(-50%, -50%);
+  @extend %title-30;
+  color: $color-turquoise;
 }

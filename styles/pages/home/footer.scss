@@ -1,4 +1,46 @@
 .home__footer {
+  position: relative;
+  display: flex;
+  height: 23rem;
+}
+.home__footer__box {
+  position: absolute;
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  height: 23rem;
+  background-color: $color-black;
+  clip-path: polygon(
+    0% 50%,
+    8% 55%,
+    16% 47%,
+    25% 62%,
+    37% 46%,
+    43% 55%,
+    48% 79%,
+    58% 100%,
+    83% 100%,
+    88% 77%,
+    96% 67%,
+    100% 74%,
+    100% 100%,
+    66% 100%,
+    0 100%
+  );
 }
 .home__footer__link {
+  @extend %description-24;
+  padding-left: 10rem;
+  padding-bottom: 3.5rem;
+  color: $color-white;
+  text-decoration: none;
+  z-index: 1;
+}
+.home__footer__cpr {
+  position: absolute;
+  bottom: 2.5rem;
+  right: 2rem;
+  @extend %description-16;
+  color: $color-white;
+  z-index: 1;
 }

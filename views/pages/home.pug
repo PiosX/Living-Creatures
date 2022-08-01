@@ -13,8 +13,9 @@ block content
         if section.slice_type == 'intro'
           section.home__intro
             h2.home__intro__title1=section.primary.title1
-            h2.home__intro__title2=section.primary.title2
-            p.home__intro__desc=section.primary.description
+            .home__intro__box
+              h2.home__intro__box__title2=section.primary.title2
+              p.home__intro__box__desc=section.primary.description
             figure.home__intro__media
               img.home__intro__media__image(src=section.primary.image.url alt=section.primary.image.alt)
         
@@ -29,18 +30,23 @@ block content
         if section.slice_type == 'highlights'
           section.home__highlights 
             h2.home__highlights__title=section.primary.title
-            .home__highlights__content 
-            each content in section.items 
-              h3.home__highlights__subtitle=content.subtitle
-              p.home__highlights__desc=content.description
+            .home__highlights__wrapper
+              .home__highlights__content 
+                .home__highlights__content__item
+              .home__highlights__box  
+                each content in section.items 
+                  h3.home__highlights__box__subtitle=content.subtitle
+                  p.home__highlights__box__desc=content.description
 
         if section.slice_type == 'components'
           section.home__components 
             a.home__components__enter(href="/sunlight")=section.primary.enter
-            a.home__components__emerge(href="#header")=section.primary.emerge
             p.home__components__text=section.primary.text
+            a.home__components__emerge(href="#header")=section.primary.emerge
 
         if section.slice_type == 'footer'
-          section.home__footer 
-            each link in section.items 
-              a.home__footer__link(href="#")=link.text
+          section.home__footer
+            p.home__footer__cpr="Copyright © 2022"
+            .home__footer__box
+              each link in section.items 
+                a.home__footer__link(href=link.link.url)=link.text

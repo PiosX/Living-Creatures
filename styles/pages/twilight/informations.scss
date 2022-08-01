@@ -1,20 +1,56 @@
 .twilight__informations {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
 }
 .twilight__informations__title {
+  @extend %title-100;
+  width: 50%;
+  text-align: right;
+}
+.twilight__informations__title2 {
+  @extend %title-100;
+  width: 68%;
+  text-align: right;
 }
 .twilight__informations__border {
+  @extend %description-24;
+  margin: 2rem 0;
+  padding-left: 5rem;
 }
 .twilight__informations__box {
+  position: relative;
+  margin-top: 10rem;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
 .twilight__informations__box__image {
+  width: 100%;
 }
 .twilight__informations__box__list {
+  position: absolute;
+  display: block;
+  transform: translate(-50%, -50%);
+  left: 20%;
+  top: 65%;
+  color: $color-white;
 }
 .twilight__informations__box__list__date {
+  @extend %description-24;
 }
 .twilight__informations__box__list__name {
+  @extend %title-64;
+  margin: 1rem 0;
 }
 .twilight__informations__box__list__location {
+  @extend %description-24;
 }
 .twilight__informations__box__desc {
+  @extend %description-30;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  left: 30%;
+  top: 85%;
+  color: $color-white;
 }

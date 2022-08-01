@@ -11,20 +11,22 @@ block content
           section.midnight__border 
             each item in section.items 
               p.midnight__border__text=item.text
+              hr.midnight__border__hr
               p.midnight__border__desc=item.description
 
         if section.slice_type == 'highlights'
           section.midnight__highlights 
-            h2.midnight__highlights__title=section.primary.title
+            h2.midnight__highlights__title!=section.primary.title.replace(/\n/g, '<br>')
             p.midnight__highlights__desc=section.primary.description
 
         if section.slice_type == 'header'
           section.midnight__header
-            p.midnight__header__text=section.primary.text
-            h1.midnight__header__title=section.primary.title
-            p.midnight__header__subtitle=section.primary.subtitle
+            .midnight__header__box
+              p.midnight__header__text=section.primary.text
+              h1.midnight__header__title=section.primary.title
+              p.midnight__header__subtitle=section.primary.subtitle
             each item in section.items 
-              p.midnight__header__text=item.text
+              p.midnight__header__subtext=item.text
 
         if section.slice_type == 'content'
           section.midnight__content
@@ -35,30 +37,33 @@ block content
                 figcaption.midnight__content__media__name=media.name
 
         if section.slice_label == 'border2'
-          section.midnight__border 
+          section.midnight__suborder 
             each item in section.items 
-              .midnight__border_box
-                p.midnight__border__box__text=item.text
-                p.midnight__border__box_desc=item.description
-              .midnight__border__media 
-                img.midnight__border__media(src=item.icon.url alt=item.icon.alt)
+              .midnight__suborder_box
+                p.midnight__suborder__box__text=item.text
+                p.midnight__suborder__box_desc=item.description
+              .midnight__suborder__media 
+                img.midnight__suborder__media__img(src=item.icon.url alt=item.icon.alt)
 
         if section.slice_type == 'informations'
           section.midnight__informations 
             h2.midnight__informations__title=section.primary.title
-            each media in section.items 
-              .midnight__informations__box 
+            .midnight__informations__box 
+              each media in section.items 
                 figure.midnight__informations__box__media 
                   img.midnight__informations__box__media__image(src=media.image.url alt=media.image.alt)
                   figcaption.midnight__informations__box__media__subtitle=media.subtitle
-                p.midnight__informations__box__desc=media.description  
+                  p.midnight__informations__box__desc=media.description  
 
         if section.slice_label == 'border3'
           section.midnight__border 
             each item in section.items 
               p.midnight__border__text=item.text
+              hr.midnight__border__hr
               p.midnight__border__desc=item.description
 
         if section.slice_type == 'footer'
           section.midnight__footer 
             h3.midnight__footer__title=section.primary.title
+            .midnight__informations__button
+              a.midnight__informations__button__link(href='/abyss')="v"

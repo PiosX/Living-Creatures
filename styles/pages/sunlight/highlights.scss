@@ -1,10 +1,50 @@
 .sunlight__highlights {
+  position: relative;
+  height: 100vh;
+  margin-bottom: 20rem;
 }
-.sunlight__highlights {
+.sunlight__highlights__title {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  @extend %title-180;
+  text-align: center;
+  z-index: 1;
 }
 .sunlight__highlights__media {
+  position: absolute;
+
+  &:nth-child(2) {
+    top: 27%;
+    left: 13%;
+    width: 40rem;
+    height: 48rem;
+  }
+  &:nth-child(3) {
+    top: 0;
+    left: 75%;
+    width: 15rem;
+    height: 20rem;
+  }
+  &:nth-child(4) {
+    top: 66%;
+    left: 67%;
+    width: 29rem;
+    height: 33.5rem;
+  }
+  &:last-child {
+    bottom: 0;
+    left: 85%;
+    white-space: nowrap;
+  }
 }
 .sunlight__highlights__media__image {
+  @extend %cover;
+  object-fit: cover;
 }
 .sunlight__highlights__media__text {
+  position: absolute;
+  @extend %title-30;
+  bottom: -10rem;
 }

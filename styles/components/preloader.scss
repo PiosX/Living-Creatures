@@ -1,8 +1,22 @@
 .preloader {
+  @extend %cover;
+  @extend %center;
+  flex-direction: column;
+  text-align: center;
+  background: $color-turquoise;
+  display: none;
 }
 .preloader__text {
+  @extend %title-40;
 }
-.preloader__text {
+.preloader__author {
+  @extend %description-20;
+  padding-top: 3rem;
 }
 .preloader__number {
+  @extend %description-30;
+  bottom: 5rem;
+  left: 50%;
+  position: absolute;
+  transform: translateX(-50%);
 }

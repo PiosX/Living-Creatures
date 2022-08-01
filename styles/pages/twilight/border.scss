@@ -1,6 +1,14 @@
 .twilight__border {
+  margin: 15rem 0;
+}
+.twilight__border__hr {
+  border-top: 2px dashed $color-black;
 }
 .twilight__border__text {
+  @extend %description-24;
 }
 .twilight__border__description {
+  @extend %description-20;
+  width: 30%;
+  text-align: right;
 }

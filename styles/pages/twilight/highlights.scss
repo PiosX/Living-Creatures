@@ -1,8 +1,16 @@
 .twilight__highlights {
+  height: 60vh;
 }
 .twilight__highlights__title {
+  @extend %title-130;
 }
 .twilight__highlights__text1 {
+  @extend %title-40;
+  text-align: center;
+  margin: 10rem 0;
 }
 .twilight__highlights__text2 {
+  @extend %title-40;
+  text-align: center;
+  margin: 10rem 0;
 }

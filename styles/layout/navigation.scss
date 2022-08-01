@@ -1,14 +1,32 @@
 .navigation {
+  @extend %cover;
+  z-index: z('navigation');
+  position: fixed;
+  height: 12rem;
 }
-.navigation__wrapper {
+.navigation__list__main {
+  position: absolute;
+  margin-left: 4rem;
+  text-align: center;
 }
-.navigation__link {
-}
-.navigation__link__icon {
+.navigation__list__main__link {
+  @extend %title-30;
+  text-decoration: none;
+  color: $color-turquoise;
 }
 .navigation__list {
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 .navigation__list__item {
+  margin-left: 20rem;
+  &:nth-child(2) {
+    margin-left: 40rem;
+  }
 }
 .navigation__list__link {
+  @extend %description-24;
+  text-decoration: none;
+  color: $color-black;
 }

@@ -1,14 +1,42 @@
 .midnight {
-}
-.midnight__wrapper {
+  position: relative;
 }
 .midnight__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.midnight__header__box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 30rem;
 }
 .midnight__header__text {
+  position: absolute;
+  top: -5rem;
+  left: 5rem;
+  transform: translate(-50%, -50%);
+  @extend %description-24;
 }
 .midnight__header__title {
+  @extend %title-190;
+  text-align: center;
 }
 .midnight__header__subtitle {
+  position: absolute;
+  left: 25%;
+  bottom: -10rem;
+  transform: translate(-50%, -50%);
+  @extend %title-30;
+  color: $color-turquoise;
 }
-.midnight__header__text {
+.midnight__header__subtext {
+  @extend %description-48;
+  padding-bottom: 8rem;
 }

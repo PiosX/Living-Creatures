@@ -1,12 +1,22 @@
-.midnight__border {
+.midnight__suborder {
+  margin: 15rem 0 20rem;
+  display: flex;
 }
-.midnight__border_box {
+.midnight__suborder_box {
+  width: 30%;
 }
-.midnight__border__box__text {
+.midnight__suborder__box__text {
+  @extend %description-24;
 }
-.midnight__border__box_desc {
+.midnight__suborder__box_desc {
+  @extend %description-20;
+  text-align: right;
 }
-.midnight__border__media {
+.midnight__suborder__media {
+  margin: 8rem 0 0 15rem;
+  width: 15rem;
+  height: 15rem;
 }
-.midnight__border__media {
+.midnight__suborder__media__img {
+  width: 100%;
 }

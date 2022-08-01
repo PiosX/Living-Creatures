@@ -1,12 +1,36 @@
 .abyss {
-}
-.abyss__wrapper {
+  position: relative;
 }
 .abyss__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.abyss__header__box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
 }
 .abyss__header__text {
+  position: absolute;
+  top: -5rem;
+  left: 5rem;
+  transform: translate(-50%, -50%);
+  @extend %description-24;
 }
 .abyss__header__title {
+  @extend %title-190;
+  text-align: center;
 }
 .abyss__header__subtitle {
+  position: absolute;
+  left: 25%;
+  bottom: -10rem;
+  transform: translate(-50%, -50%);
+  @extend %title-30;
+  color: $color-turquoise;
 }

@@ -1,12 +1,36 @@
 .sunlight {
-}
-.sunlight__wrapper {
+  position: relative;
 }
 .sunlight__header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.sunlight__header__box {
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .sunlight__header__text {
+  position: absolute;
+  top: -5rem;
+  left: 5rem;
+  transform: translate(-50%, -50%);
+  @extend %description-24;
 }
 .sunlight__header__title {
+  @extend %title-190;
 }
 .sunlight__header__subtitle {
+  position: absolute;
+  left: 25%;
+  bottom: -10rem;
+  transform: translate(-50%, -50%);
+  @extend %title-30;
+  color: $color-turquoise;
 }

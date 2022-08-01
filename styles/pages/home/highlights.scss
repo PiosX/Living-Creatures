@@ -1,10 +1,46 @@
 .home__highlights {
+  margin: 40rem 0 5rem;
+}
+.home__highlights__wrapper {
+  display: flex;
 }
 .home__highlights__title {
+  @extend %title-90;
+  text-align: center;
+  padding-bottom: 20rem;
 }
 .home__highlights__content {
+  width: 55%;
+  height: 90rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.home__highlights__subtitle {
+.home__highlights__content__item {
+  width: 55%;
+  height: 80%;
+  background-color: aqua;
 }
-.home__highlights__desc {
+.home__highlights__box {
+  width: 45%;
+  height: 90rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.home__highlights__box__subtitle {
+  display: none;
+  padding-bottom: 5rem;
+  @extend %title-40;
+  &:nth-child(1) {
+    display: block;
+  }
+}
+.home__highlights__box__desc {
+  display: none;
+  @extend %description-24;
+  &:nth-child(2) {
+    display: block;
+    max-width: 60%;
+  }
 }

@@ -1,6 +1,40 @@
 .twilight__footer {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .twilight__footer__title {
+  @extend %title-64;
+  width: 65%;
+  text-align: right;
+  padding: 2rem 0;
 }
 .twilight__footer__subtitle {
+  @extend %title-24;
+  width: 75%;
+  text-align: right;
+}
+.twilight__informations__button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 11rem;
+  height: 11rem;
+  border-radius: 50%;
+  box-shadow: 0 0 2.5rem inset $color-turquoise;
+  margin: 14rem 0 5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  border: none;
+  overflow: hidden;
+}
+.twilight__informations__button__link {
+  @extend %description-40;
+  padding: 10rem;
+  font-weight: bold;
+  text-align: center;
+  color: $color-black;
+  text-decoration: none;
 }

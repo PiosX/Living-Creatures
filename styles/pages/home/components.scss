@@ -1,8 +1,32 @@
 .home__components {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .home__components__enter {
+  @extend %description-30;
+  text-align: center;
+  padding: 7rem 6rem;
+  text-decoration: none;
+  border-radius: 50%;
+  box-shadow: 0 0 2.5rem inset $color-turquoise;
+  color: $color-black;
 }
 .home__components__emerge {
+  @extend %description-20;
+  margin-left: 120rem;
+  text-align: right;
+  padding: 3.7rem 1.6rem;
+  text-decoration: none;
+  border-radius: 50%;
+  box-shadow: 0 0 2.5rem inset $color-turquoise;
+  color: $color-black;
 }
 .home__components__text {
+  margin: 5rem 0;
+  text-align: right;
+  width: 35%;
+  @extend %title-90;
+  text-transform: uppercase;
 }

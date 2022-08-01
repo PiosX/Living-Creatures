@@ -1,12 +1,38 @@
 .home__intro {
+  position: relative;
+  margin: 20rem 0;
 }
 .home__intro__title1 {
+  @extend %title-150;
+  position: absolute;
+  top: 0;
+  left: 1rem;
+  z-index: 1;
 }
-.home__intro__title2 {
+.home__intro__box {
+  position: absolute;
+  top: 70%;
+  left: 85%;
+  transform: translate(-50%, -50%);
+  width: 45rem;
+  z-index: 1;
 }
-.home__intro__desc {
+.home__intro__box__title2 {
+  @extend %title-90;
+  margin-left: -10rem;
+  padding-bottom: 5rem;
+}
+.home__intro__box__desc {
+  @extend %description-26;
 }
 .home__intro__media {
+  position: relative;
+  top: 7.5rem;
+  width: 145rem;
+  height: 80rem;
+  margin-left: 10rem;
 }
 .home__intro__media__image {
+  @extend %cover;
+  object-fit: cover;
 }

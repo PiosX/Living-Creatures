@@ -1,9 +1,10 @@
 .home {
-  background-color: #f0f;
-}
-.home__wrapper {
+  @extend %center;
 }
 .home__header {
+  @extend %center;
+  height: 100vh;
 }
 .home__title {
+  @extend %title-190;
 }

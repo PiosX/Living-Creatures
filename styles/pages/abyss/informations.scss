@@ -1,16 +1,33 @@
 .abyss__informations {
+  padding: 0 5rem;
 }
 .abyss__informations__title {
+  @extend %title-100;
+  margin-bottom: 10rem;
+}
+.abyss__informations__main {
+  display: flex;
 }
 .abyss__informations__box {
+  width: 50%;
 }
 .abyss__informations__desc {
+  @extend %description-32;
+  margin: 8rem 0 0 7rem;
+  width: 78%;
 }
 .abyss__informations__mbox {
+  width: 50%;
 }
 .abyss__informations__mbox__media {
+  width: 70%;
+  margin-left: 15rem;
 }
 .abyss__informations__mbox__media__image {
+  width: 100%;
+  height: 80vh;
 }
 .abyss__informations__mbox__media__name {
+  @extend %title-20;
+  padding: 1rem 0 0 1rem;
 }
