@@ -2,6 +2,10 @@
   position: relative;
   display: flex;
   height: 23rem;
+
+  @include media('<phone') {
+    height: 40rem;
+  }
 }
 .home__footer__box {
   position: absolute;
@@ -27,6 +31,10 @@
     66% 100%,
     0 100%
   );
+
+  @include media('<phone') {
+    height: 40rem;
+  }
 }
 .home__footer__link {
   @extend %description-24;
@@ -35,6 +43,11 @@
   color: $color-white;
   text-decoration: none;
   z-index: 1;
+
+  @include media('<phone') {
+    padding-left: 6rem;
+    font-size: 4.2rem;
+  }
 }
 .home__footer__cpr {
   position: absolute;
@@ -43,4 +56,8 @@
   @extend %description-16;
   color: $color-white;
   z-index: 1;
+
+  @include media('<phone') {
+    font-size: 2.7rem;
+  }
 }

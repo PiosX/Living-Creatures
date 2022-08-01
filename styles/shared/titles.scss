@@ -1,6 +1,10 @@
 %title-16 {
   font-family: $font-gotu;
   font-size: 1.6rem;
+
+  @include media('<phone') {
+    font-size: 3.6rem;
+  }
 }
 %title-20 {
   font-family: $font-gotu;
@@ -13,6 +17,10 @@
 %title-30 {
   font-family: $font-gotu;
   font-size: 3rem;
+
+  @include media('<phone') {
+    font-size: 4.5rem;
+  }
 }
 %title-36 {
   font-family: $font-gotu;
@@ -65,4 +73,8 @@
 %title-190 {
   font-family: $font-gotu;
   font-size: 19rem;
+
+  @include media('<phone') {
+    font-size: 23rem;
+  }
 }

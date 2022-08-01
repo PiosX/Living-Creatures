@@ -8,6 +8,12 @@
   top: 0;
   left: 1rem;
   z-index: 1;
+
+  @include media('<phone') {
+    position: relative;
+    text-align: center;
+    font-size: 18rem;
+  }
 }
 .home__intro__box {
   position: absolute;
@@ -16,14 +22,29 @@
   transform: translate(-50%, -50%);
   width: 45rem;
   z-index: 1;
+
+  @include media('<phone') {
+    top: 125rem;
+    left: 35%;
+    color: $color-white;
+    width: 70rem;
+  }
 }
 .home__intro__box__title2 {
   @extend %title-90;
   margin-left: -10rem;
   padding-bottom: 5rem;
+
+  @include media('<phone') {
+    font-size: 12rem;
+  }
 }
 .home__intro__box__desc {
   @extend %description-26;
+
+  @include media('<phone') {
+    font-size: 4.6rem;
+  }
 }
 .home__intro__media {
   position: relative;
@@ -31,6 +52,11 @@
   width: 145rem;
   height: 80rem;
   margin-left: 10rem;
+
+  @include media('<phone') {
+    width: 90%;
+    height: 160rem;
+  }
 }
 .home__intro__media__image {
   @extend %cover;

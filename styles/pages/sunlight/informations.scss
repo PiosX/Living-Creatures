@@ -5,11 +5,19 @@
 }
 .sunlight__informations__title {
   @extend %title-100;
+
+  @include media('<phone') {
+    font-size: 12rem;
+  }
 }
 .sunlight__informations__subtitle {
   @extend %title-64;
   text-align: center;
   padding-top: 7rem;
+
+  @include media('<phone') {
+    font-size: 7.4rem;
+  }
 }
 .sunlight__informations__wrapper {
   margin-top: 10rem;
@@ -25,11 +33,19 @@
   @extend %description-24;
   font-weight: bold;
   margin-top: 8rem;
+
+  @include media('<phone') {
+    font-size: 5rem;
+  }
 }
 .sunlight__informations__description {
   @extend %description-28;
   padding-top: 8rem;
   padding-left: 3rem;
+
+  @include media('<phone') {
+    font-size: 5rem;
+  }
 }
 .sunlight__informations__media {
   width: 65%;
@@ -38,6 +54,10 @@
 .sunlight__informations__date {
   @extend %description-16;
   margin-bottom: 1rem;
+
+  @include media('<phone') {
+    font-size: 3.6rem;
+  }
 }
 .sunlight__informations__image {
   width: 80%;
@@ -45,12 +65,20 @@
 .sunlight__informations__name {
   @extend %title-20;
   margin-top: 2rem;
+
+  @include media('<phone') {
+    font-size: 4rem;
+  }
 }
 .sunlight__informations__subtext {
   @extend %title-64;
   margin-top: 30rem;
   text-align: right;
   width: 47%;
+
+  @include media('<phone') {
+    font-size: 8.4rem;
+  }
 }
 .sunlight__informations__button {
   position: relative;
@@ -66,6 +94,11 @@
   transform: translateX(-50%);
   border: none;
   overflow: hidden;
+
+  @include media('<phone') {
+    width: 20rem;
+    height: 20rem;
+  }
 }
 .sunlight__informations__button__link {
   @extend %description-40;
@@ -74,4 +107,8 @@
   text-align: center;
   color: $color-black;
   text-decoration: none;
+
+  @include media('<phone') {
+    font-size: 9rem;
+  }
 }

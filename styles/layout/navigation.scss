@@ -13,6 +13,10 @@
   @extend %title-30;
   text-decoration: none;
   color: $color-turquoise;
+
+  @include media('<phone') {
+    font-size: 5.5rem;
+  }
 }
 .navigation__list {
   display: flex;
@@ -29,4 +33,8 @@
   @extend %description-24;
   text-decoration: none;
   color: $color-black;
+
+  @include media('<phone') {
+    font-size: 5.2rem;
+  }
 }

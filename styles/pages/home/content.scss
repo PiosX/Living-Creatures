@@ -4,6 +4,13 @@
   grid-template-rows: repeat(21, 5vh);
   gap: 2rem;
   margin: 0 10rem;
+
+  @include media('<tablet') {
+    gap: 0.5rem;
+  }
+  @include media('<phone') {
+    grid-template-rows: repeat(19, 5vh);
+  }
 }
 .home__content__title1 {
   @extend %title-90;
@@ -11,11 +18,19 @@
   grid-column-end: 6;
   grid-row: 2/4;
   text-align: center;
+
+  @include media('<phone') {
+    font-size: 11rem;
+  }
 }
 .home__content__title2 {
   @extend %title-90;
   grid-column: 7/11;
   grid-row: 14/16;
+
+  @include media('<phone') {
+    font-size: 11rem;
+  }
 }
 .home__content__media {
   overflow: hidden;
@@ -28,18 +43,43 @@
   &:nth-child(4) {
     grid-column: 7/10;
     grid-row: 7/13;
+
+    @include media('<tablet') {
+      grid-row: 7/12;
+    }
+    @include media('<phone') {
+      grid-row: 7/10;
+    }
   }
   &:nth-child(5) {
     grid-column: 1/3;
     grid-row: 12/19;
+
+    @include media('<tablet') {
+      grid-row: 12/17;
+    }
+    @include media('<phone') {
+      grid-row: 11/14;
+    }
   }
   &:nth-child(6) {
     grid-column: 4/6;
     grid-row: 14/21;
+
+    @include media('<tablet') {
+      grid-row: 13/19;
+    }
+    @include media('<phone') {
+      grid-row: 13/16;
+    }
   }
   &:nth-child(7) {
     grid-column: 7/10;
     grid-row: 16/22;
+
+    @include media('<phone') {
+      grid-row: 15/19;
+    }
   }
 }
 .home__content__media__image {

@@ -9,6 +9,10 @@
 %description-24 {
   font-family: $font-redhat;
   font-size: 2.4rem;
+
+  @include media('<phone') {
+    font-size: 3.2rem;
+  }
 }
 %description-26 {
   font-family: $font-redhat;

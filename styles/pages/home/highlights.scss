@@ -8,6 +8,10 @@
   @extend %title-90;
   text-align: center;
   padding-bottom: 20rem;
+
+  @include media('<phone') {
+    font-size: 13rem;
+  }
 }
 .home__highlights__content {
   width: 55%;
@@ -35,6 +39,10 @@
   &:nth-child(1) {
     display: block;
   }
+
+  @include media('<phone') {
+    font-size: 7rem;
+  }
 }
 .home__highlights__box__desc {
   display: none;
@@ -42,5 +50,13 @@
   &:nth-child(2) {
     display: block;
     max-width: 60%;
+
+    @include media('<phone') {
+      font-size: 4rem;
+    }
+  }
+
+  @include media('<phone') {
+    font-size: 4rem;
   }
 }

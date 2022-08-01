@@ -1,5 +1,6 @@
 .home {
   @extend %center;
+  overflow: hidden;
 }
 .home__header {
   @extend %center;

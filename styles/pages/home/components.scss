@@ -12,6 +12,11 @@
   border-radius: 50%;
   box-shadow: 0 0 2.5rem inset $color-turquoise;
   color: $color-black;
+
+  @include media('<phone') {
+    font-size: 8rem;
+    padding: 10rem 6rem;
+  }
 }
 .home__components__emerge {
   @extend %description-20;
@@ -22,6 +27,11 @@
   border-radius: 50%;
   box-shadow: 0 0 2.5rem inset $color-turquoise;
   color: $color-black;
+
+  @include media('<phone') {
+    font-size: 8rem;
+    padding: 9.7rem 1.6rem;
+  }
 }
 .home__components__text {
   margin: 5rem 0;
@@ -29,4 +39,8 @@
   width: 35%;
   @extend %title-90;
   text-transform: uppercase;
+
+  @include media('<phone') {
+    font-size: 10rem;
+  }
 }
