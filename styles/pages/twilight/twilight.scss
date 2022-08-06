@@ -24,6 +24,10 @@
 .twilight__header__title {
   @extend %title-190;
   text-align: center;
+
+  @include media('<=phone') {
+    font-size: 23rem;
+  }
 }
 .twilight__header__subtitle {
   position: absolute;

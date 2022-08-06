@@ -1,6 +1,16 @@
 .twilight__content {
   position: relative;
   height: 200vh;
+
+  @include media('<=phone') {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    height: 238rem;
+    margin-top: 40rem;
+    margin-bottom: 20rem;
+  }
 }
 .twilight__content__title {
   position: absolute;
@@ -8,60 +18,81 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-}
-.twilight__content__media {
-  position: absolute;
-  transform: translate(-50%, -50%);
 
-  &:nth-child(2) {
-    width: 45rem;
-    height: 34rem;
-    top: 27%;
-    left: 83%;
-  }
-  &:nth-child(3) {
-    width: 50rem;
-    height: 19rem;
-    top: 37%;
+  @include media('<=phone') {
+    position: absolute;
+    top: -15rem;
     left: 50%;
   }
-  &:nth-child(4) {
-    width: 35rem;
-    height: 15rem;
-    top: 20%;
-    left: 13%;
+}
+.twilight__content__media {
+  @include media('>phone') {
+    position: absolute;
+    transform: translate(-50%, -50%);
+
+    &:nth-child(2) {
+      width: 45rem;
+      height: 34rem;
+      top: 27%;
+      left: 83%;
+    }
+    &:nth-child(3) {
+      width: 50rem;
+      height: 19rem;
+      top: 37%;
+      left: 50%;
+    }
+    &:nth-child(4) {
+      width: 35rem;
+      height: 15rem;
+      top: 20%;
+      left: 13%;
+    }
+    &:nth-child(5) {
+      width: 27rem;
+      height: 14rem;
+      top: 60%;
+      left: 18%;
+    }
+    &:nth-child(6) {
+      width: 31rem;
+      height: 22rem;
+      top: 68%;
+      left: 48%;
+    }
+    &:nth-child(7) {
+      width: 35rem;
+      height: 30rem;
+      top: 71%;
+      left: 81%;
+    }
+    &:nth-child(8) {
+      width: 25rem;
+      height: 25rem;
+      top: 85%;
+      left: 26%;
+    }
   }
-  &:nth-child(5) {
-    width: 27rem;
-    height: 14rem;
-    top: 60%;
-    left: 18%;
-  }
-  &:nth-child(6) {
-    width: 31rem;
-    height: 22rem;
-    top: 68%;
-    left: 48%;
-  }
-  &:nth-child(7) {
-    width: 35rem;
-    height: 30rem;
-    top: 71%;
-    left: 81%;
-  }
-  &:nth-child(8) {
-    width: 25rem;
-    height: 25rem;
-    top: 85%;
-    left: 26%;
+  @include media('<=phone') {
+    width: 49%;
   }
 }
 .twilight__content__media__image {
   @extend %cover;
   object-fit: cover;
+
+  @include media('<=phone') {
+    position: relative;
+    width: 100%;
+    height: 50rem;
+  }
 }
 .twilight__content__media__text {
   position: absolute;
   @extend %title-16;
   bottom: -3rem;
+
+  @include media('<=phone') {
+    position: relative;
+  }
 }

@@ -1,5 +1,6 @@
 .abyss {
   position: relative;
+  overflow: hidden;
 }
 .abyss__header {
   display: flex;
@@ -7,6 +8,10 @@
   align-items: center;
   justify-content: center;
   height: 100vh;
+
+  @include media('<=phone') {
+    height: 50vh;
+  }
 }
 .abyss__header__box {
   position: relative;

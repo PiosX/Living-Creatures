@@ -1,16 +1,35 @@
 .twilight__highlights {
   height: 60vh;
+
+  @include media('<=phone') {
+    height: 30vh;
+  }
 }
 .twilight__highlights__title {
   @extend %title-130;
+
+  @include media('<=phone') {
+    font-size: 18rem;
+    margin-top: 80rem;
+  }
 }
 .twilight__highlights__text1 {
   @extend %title-40;
   text-align: center;
   margin: 10rem 0;
+
+  @include media('<=phone') {
+    font-size: 6rem;
+    margin: 30rem 0;
+  }
 }
 .twilight__highlights__text2 {
   @extend %title-40;
   text-align: center;
   margin: 10rem 0;
+
+  @include media('<=phone') {
+    font-size: 6rem;
+    margin: 30rem 0;
+  }
 }

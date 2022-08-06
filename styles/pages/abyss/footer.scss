@@ -4,6 +4,10 @@
 .abyss__footer__title {
   @extend %title-100;
   text-align: center;
+
+  @include media('<=phone') {
+    font-size: 15rem;
+  }
 }
 .abyss__footer__box {
   position: relative;
@@ -33,12 +37,20 @@
     top: 66%;
     left: 22%;
   }
+
+  @include media('<=phone') {
+    font-size: 8.2rem;
+  }
 }
 .abyss__footer__subtitle {
   @extend %description-20;
   padding: 2rem 0;
   width: 80%;
   text-align: right;
+
+  @include media('<=phone') {
+    font-size: 6rem;
+  }
 }
 .abyss__footer__hr {
   border-top: 2px dashed $color-black;

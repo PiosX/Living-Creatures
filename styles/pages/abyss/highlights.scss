@@ -1,8 +1,16 @@
 .abyss__highlights {
   margin: 10rem 0;
+
+  @include media('<=phone') {
+    margin-bottom: 80rem;
+  }
 }
 .abyss__highlights__text {
   @extend %title-36;
   text-align: center;
   padding-bottom: 6rem;
+
+  @include media('<=phone') {
+    font-size: 5.6rem;
+  }
 }

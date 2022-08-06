@@ -4,18 +4,35 @@
 }
 .midnight__suborder_box {
   width: 30%;
+
+  @include media('<=phone') {
+    width: 64%;
+  }
 }
 .midnight__suborder__box__text {
   @extend %description-24;
+
+  @include media('<=phone') {
+    font-size: 5rem;
+  }
 }
 .midnight__suborder__box_desc {
   @extend %description-20;
   text-align: right;
+
+  @include media('<=phone') {
+    font-size: 5rem;
+    width: 50%;
+  }
 }
 .midnight__suborder__media {
   margin: 8rem 0 0 15rem;
   width: 15rem;
   height: 15rem;
+
+  @include media('<=phone') {
+    margin-top: 8rem;
+  }
 }
 .midnight__suborder__media__img {
   width: 100%;

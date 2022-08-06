@@ -39,4 +39,8 @@
 .midnight__header__subtext {
   @extend %description-48;
   padding-bottom: 8rem;
+
+  @include media('<=phone') {
+    font-size: 6.8rem;
+  }
 }

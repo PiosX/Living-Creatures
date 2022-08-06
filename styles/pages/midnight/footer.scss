@@ -2,10 +2,18 @@
   height: 40vh;
   display: flex;
   flex-direction: column;
+
+  @include media('<=phone') {
+    justify-content: center;
+  }
 }
 .midnight__footer__title {
   @extend %title-50;
   text-align: center;
+
+  @include media('<=phone') {
+    font-size: 12rem;
+  }
 }
 .midnight__informations__button {
   position: relative;
@@ -21,6 +29,11 @@
   transform: translateX(-50%);
   border: none;
   overflow: hidden;
+
+  @include media('<phone') {
+    width: 20rem;
+    height: 20rem;
+  }
 }
 .midnight__informations__button__link {
   @extend %description-40;
@@ -29,4 +42,8 @@
   text-align: center;
   color: $color-black;
   text-decoration: none;
+
+  @include media('<phone') {
+    font-size: 9rem;
+  }
 }

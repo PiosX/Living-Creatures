@@ -5,13 +5,27 @@
 .midnight__informations__title {
   @extend %title-130;
   padding-bottom: 5rem;
+
+  @include media('<=phone') {
+    font-size: 18rem;
+  }
 }
 .midnight__informations__box {
   display: flex;
   column-gap: 2rem;
+
+  @include media('<=phone') {
+    width: 100%;
+    flex-direction: column;
+    row-gap: 10rem;
+  }
 }
 .midnight__informations__box__media {
   width: 50%;
+
+  @include media('<=phone') {
+    width: 100%;
+  }
 }
 .midnight__informations__box__media__image {
   width: 100%;
@@ -21,8 +35,16 @@
   @extend %title-24;
   padding: 1rem 0 1rem 1rem;
   color: $color-turquoise;
+
+  @include media('<=phone') {
+    font-size: 7.4rem;
+  }
 }
 .midnight__informations__box__desc {
   @extend %description-16;
   padding-left: 5rem;
+
+  @include media('<=phone') {
+    font-size: 5rem;
+  }
 }

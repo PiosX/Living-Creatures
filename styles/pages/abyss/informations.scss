@@ -4,24 +4,49 @@
 .abyss__informations__title {
   @extend %title-100;
   margin-bottom: 10rem;
+
+  @include media('<=phone') {
+    font-size: 15rem;
+  }
 }
 .abyss__informations__main {
   display: flex;
+
+  @include media('<=phone') {
+    flex-direction: column-reverse;
+  }
 }
 .abyss__informations__box {
   width: 50%;
+
+  @include media('<=phone') {
+    width: 100%;
+  }
 }
 .abyss__informations__desc {
   @extend %description-32;
   margin: 8rem 0 0 7rem;
   width: 78%;
+
+  @include media('<=phone') {
+    font-size: 6rem;
+  }
 }
 .abyss__informations__mbox {
   width: 50%;
+
+  @include media('<=phone') {
+    width: 100%;
+  }
 }
 .abyss__informations__mbox__media {
   width: 70%;
   margin-left: 15rem;
+
+  @include media('<=phone') {
+    width: 100%;
+    margin: 0;
+  }
 }
 .abyss__informations__mbox__media__image {
   width: 100%;
@@ -30,4 +55,8 @@
 .abyss__informations__mbox__media__name {
   @extend %title-20;
   padding: 1rem 0 0 1rem;
+
+  @include media('<=phone') {
+    font-size: 5rem;
+  }
 }

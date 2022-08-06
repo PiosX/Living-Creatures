@@ -1,14 +1,30 @@
 .midnight__highlights {
   height: 100vh;
   margin-bottom: 10rem;
+
+  @include media('<phone') {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: -30rem;
+  }
 }
 .midnight__highlights__title {
   @extend %title-130;
   text-align: center;
   line-height: 1.5;
+
+  @include media('<phone') {
+    font-size: 20rem;
+  }
 }
 .midnight__highlights__desc {
   @extend %description-32;
   text-align: center;
   margin-top: 10rem;
+
+  @include media('<phone') {
+    font-size: 6rem;
+    padding: 0 2rem;
+  }
 }

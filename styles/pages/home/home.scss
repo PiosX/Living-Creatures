@@ -8,4 +8,8 @@
 }
 .home__title {
   @extend %title-190;
+
+  @include media('<=phone') {
+    text-align: center;
+  }
 }

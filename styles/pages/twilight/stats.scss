@@ -10,16 +10,28 @@
 .twilight__stats__text1 {
   @extend %description-48;
   width: 50%;
+
+  @include media('<phone') {
+    font-size: 10rem;
+  }
 }
 .twilight__stats__text2 {
   @extend %description-48;
   width: 50%;
   text-align: right;
+
+  @include media('<phone') {
+    font-size: 10rem;
+  }
 }
 .twilight__stats__subtitle {
   @extend %description-48;
   width: 100%;
   text-align: center;
+
+  @include media('<phone') {
+    font-size: 10rem;
+  }
 }
 .twilight__stats__dlist {
   width: 50%;
@@ -27,6 +39,10 @@
 .twilight__stats__dlist__item {
   @extend %description-36;
   padding: 0 0 5rem 5rem;
+
+  @include media('<phone') {
+    font-size: 6.5rem;
+  }
 }
 .twilight__stats__ilist {
   width: 50%;
@@ -35,15 +51,27 @@
   @extend %description-36;
   text-align: right;
   padding: 0 5rem 5rem 0;
+
+  @include media('<phone') {
+    font-size: 6.5rem;
+  }
 }
 .twilight__stats__svgd {
   position: absolute;
   top: 6rem;
   left: 12rem;
+
+  @include media('<phone') {
+    display: none;
+  }
 }
 .twilight__stats__svgi {
   position: absolute;
   top: 6rem;
   right: 12rem;
   transform: scaleX(-1);
+
+  @include media('<phone') {
+    display: none;
+  }
 }
