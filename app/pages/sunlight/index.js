@@ -6,6 +6,7 @@ export default class Sunlight extends Page {
       id: 'sunlight',
       element: '.sunlight',
       elements: {
+        wrapper: '.sunlight__wrapper',
         navigation: document.querySelector('.navigation'),
       },
     });

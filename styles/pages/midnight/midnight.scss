@@ -1,4 +1,5 @@
 .midnight {
+  @extend %page;
   position: relative;
 }
 .midnight__header {

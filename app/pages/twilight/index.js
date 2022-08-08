@@ -6,6 +6,7 @@ export default class Twilight extends Page {
       id: 'twilight',
       element: '.twilight',
       elements: {
+        wrapper: '.twilight__wrapper',
         navigation: document.querySelector('.navigation'),
       },
     });

@@ -1,4 +1,5 @@
 .sunlight {
+  @extend %page;
   position: relative;
 }
 .sunlight__header {

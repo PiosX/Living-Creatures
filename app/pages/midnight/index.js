@@ -6,6 +6,7 @@ export default class Midnight extends Page {
       id: 'midnight',
       element: '.midnight',
       elements: {
+        wrapper: '.midnight__wrapper',
         navigation: document.querySelector('.navigation'),
       },
     });

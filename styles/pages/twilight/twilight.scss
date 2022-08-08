@@ -1,4 +1,5 @@
 .twilight {
+  @extend %page;
   position: relative;
 }
 .twilight__header {
