@@ -33,7 +33,7 @@ block content
             h2.midnight__content__title=section.primary.title
             each media in section.items 
               figure.midnight__content__media 
-                img.midnight__content__media__image(src=media.image.url alt=media.image.alt)
+                img.midnight__content__media__image(data-src=media.image.url alt=media.image.alt)
                 figcaption.midnight__content__media__name=media.name
 
         if section.slice_label == 'border2'
@@ -51,7 +51,7 @@ block content
             .midnight__informations__box 
               each media in section.items 
                 figure.midnight__informations__box__media 
-                  img.midnight__informations__box__media__image(src=media.image.url alt=media.image.alt)
+                  img.midnight__informations__box__media__image(data-src=media.image.url alt=media.image.alt)
                   figcaption.midnight__informations__box__media__subtitle=media.subtitle
                   p.midnight__informations__box__desc=media.description  
 

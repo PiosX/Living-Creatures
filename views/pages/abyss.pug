@@ -30,7 +30,7 @@ block content
             h2.abyss__content__title=section.primary.title
             each media in section.items 
               figure.abyss__content__media 
-                img.abyss__content__media__image(src=media.image.url alt=media.image.alt)
+                img.abyss__content__media__image(data-src=media.image.url alt=media.image.alt)
                 figcaption.abyss__content__media__name=media.name
 
         if section.slice_type == 'informations'
@@ -41,7 +41,7 @@ block content
                 .abyss__informations__desc=section.primary.description
               .abyss__informations__mbox
                 figure.abyss__informations__mbox__media 
-                  img.abyss__informations__mbox__media__image(src=section.primary.image.url alt=section.primary.image.alt)
+                  img.abyss__informations__mbox__media__image(data-src=section.primary.image.url alt=section.primary.image.alt)
                   figcaption.abyss__informations__mbox__media__name=section.primary.name
 
         if section.slice_type == 'footer'

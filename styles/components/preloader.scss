@@ -4,14 +4,27 @@
   flex-direction: column;
   text-align: center;
   background: $color-turquoise;
-  display: none;
+  z-index: 4;
+  // display: none;
 }
 .preloader__text {
   @extend %title-40;
+
+  span {
+    display: inline-block;
+  }
+
+  @include media('<=phone') {
+    font-size: 6rem;
+  }
 }
 .preloader__author {
   @extend %description-20;
   padding-top: 3rem;
+
+  @include media('<=phone') {
+    font-size: 3rem;
+  }
 }
 .preloader__number {
   @extend %description-30;

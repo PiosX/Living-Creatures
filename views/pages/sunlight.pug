@@ -19,7 +19,7 @@ block content
             h2.sunlight__highlights__title!=section.primary.title.replace(/\n/g, '<br>')
             each media in section.items 
               figure.sunlight__highlights__media 
-                img.sunlight__highlights__media__image(src=media.image.url alt=media.image.alt)
+                img.sunlight__highlights__media__image(data-src=media.image.url alt=media.image.alt)
                 figcaption.sunlight__highlights__media__text=media.text
 
         if section.slice_type == 'content'
@@ -27,7 +27,7 @@ block content
             h2.sunlight__content__title=section.primary.title
             each media in section.items 
               figure.sunlight__content__media 
-                img.sunlight__content__media__image(src=media.image.url alt=media.image.alt)
+                img.sunlight__content__media__image(data-src=media.image.url alt=media.image.alt)
                 figcaption.sunlight__content__media__text=media.name
 
         if section.slice_type == 'border'
@@ -46,7 +46,7 @@ block content
                 p.sunlight__informations__description=section.primary.description
               figure.sunlight__informations__media
                 figcaption.sunlight__informations__date=section.primary.date
-                img.sunlight__informations__image(src=section.primary.image.url alt=section.primary.image.alt)
+                img.sunlight__informations__image(data-src=section.primary.image.url alt=section.primary.image.alt)
                 figcaption.sunlight__informations__name=section.primary.name
             p.sunlight__informations__subtext=section.primary.subtext
             .sunlight__informations__button

@@ -4,12 +4,19 @@ import Sunlight from 'pages/Sunlight';
 import Twilight from 'pages/Twilight';
 import Midnight from 'pages/Midnight';
 import Abyss from 'pages/Abyss';
+import Preloader from 'components/Preloader';
 
 class App {
   constructor() {
+    this.createPreloader();
     this.createContent();
     this.createPages();
     this.addLinkListeners();
+  }
+
+  createPreloader() {
+    this.preloader = new Preloader();
+    this.preloader.once('completed', this.onPreloaded.bind(this));
   }
 
   createContent() {
@@ -28,6 +35,10 @@ class App {
 
     this.page = this.pages[this.template];
     this.page.create();
+  }
+
+  onPreloaded() {
+    this.preloader.destroy();
     this.page.show();
   }
 
@@ -50,6 +61,8 @@ class App {
       this.page = this.pages[this.template];
       this.page.create();
       this.page.show();
+
+      this.addLinkListeners();
     } else {
       console.log('Error');
     }

@@ -48,7 +48,7 @@ block content
             h2.twilight__content__title=section.primary.title
             each media in section.items 
               figure.twilight__content__media
-                img.twilight__content__media__image(src=media.image.url alt=media.image.alt)
+                img.twilight__content__media__image(data-src=media.image.url alt=media.image.alt)
                 figcaption.twilight__content__media__text=media.name
 
         if section.slice_type == 'informations'
@@ -57,7 +57,7 @@ block content
             p.twilight__informations__border=section.primary.border
             h2.twilight__informations__title2=section.primary.title2
             .twilight__informations__box 
-              img.twilight__informations__box__image(src=section.primary.image.url alt=section.primary.image.alt)
+              img.twilight__informations__box__image(data-src=section.primary.image.url alt=section.primary.image.alt)
               ul.twilight__informations__box__list 
                 li.twilight__informations__box__list__date=section.primary.date
                 li.twilight__informations__box__list__name=section.primary.name
