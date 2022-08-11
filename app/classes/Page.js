@@ -1,11 +1,21 @@
 import GSAP from 'gsap';
+import NormalizeWheel from 'normalize-wheel';
 import Prefix from 'prefix';
 import each from 'lodash/each';
+import map from 'lodash/map';
+import Title from 'animations/Title';
+import Paragraph from 'animations/Paragraph';
+import AsyncLoad from 'classes/AsyncLoad';
 
 export default class Page {
   constructor({ element, elements, id }) {
     this.selector = element;
-    this.selectorChildren = { ...elements };
+    this.selectorChildren = {
+      ...elements,
+      animationsTitles: '[data-animation="title"]',
+      animationsParagraphs: '[data-animation="paragraph"]',
+      preloaders: '[data-src]',
+    };
     this.id = id;
     this.transformPrefix = Prefix('transform');
     this.onMouseWheelEvent = this.onMouseWheel.bind(this);
@@ -38,6 +48,40 @@ export default class Page {
           this.elements[key] = document.querySelector(entry);
         }
       }
+    });
+
+    this.createAnimations();
+    this.createPreloader();
+  }
+
+  createAnimations() {
+    this.animations = [];
+
+    // Title
+    this.animationsTitles = map(this.elements.animationsTitles, (element) => {
+      return new Title({
+        element,
+      });
+    });
+
+    this.animations.push(...this.animationsTitles);
+
+    // Paragraph
+    this.animationsParagraphs = map(
+      this.elements.animationsParagraphs,
+      (element) => {
+        return new Paragraph({
+          element,
+        });
+      }
+    );
+
+    this.animations.push(...this.animationsParagraphs);
+  }
+
+  createPreloader() {
+    this.preloaders = map(this.elements.preloaders, (element) => {
+      return new AsyncLoad({ element });
     });
   }
 
@@ -74,8 +118,8 @@ export default class Page {
   }
 
   onMouseWheel(event) {
-    const { deltaY } = event;
-    this.scroll.target += deltaY;
+    const { pixelY } = NormalizeWheel(event);
+    this.scroll.target += pixelY;
   }
 
   onResize() {

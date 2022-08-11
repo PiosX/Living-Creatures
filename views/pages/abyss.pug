@@ -9,25 +9,25 @@ block content
       each section in abyss.data.body
         if section.slice_type == 'border'
           section.abyss__border
-            p.abyss__border__text=section.primary.text
+            p.abyss__border__text(data-animation="paragraph")=section.primary.text
             hr.abyss__border__hr
-            p.abyss__border__desc=section.primary.description
+            p.abyss__border__desc(data-animation="paragraph")=section.primary.description
         
         if section.slice_type == 'header'
           section.abyss__header 
             .abyss__header__box
-              p.abyss__header__text=section.primary.text
-              h1.abyss__header__title=section.primary.title
-              p.abyss__header__subtitle=section.primary.subtitle
+              p.abyss__header__text(data-animation="paragraph")=section.primary.text
+              h1.abyss__header__title(data-animation="title")=section.primary.title
+              p.abyss__header__subtitle(data-animation="paragraph")=section.primary.subtitle
 
         if section.slice_type == 'highlights'
           section.abyss__highlights 
             each item in section.items 
-              p.abyss__highlights__text=item.text
+              p.abyss__highlights__text(data-animation="paragraph")=item.text
 
         if section.slice_type == 'content'
           section.abyss__content
-            h2.abyss__content__title=section.primary.title
+            h2.abyss__content__title(data-animation="title")=section.primary.title
             each media in section.items 
               figure.abyss__content__media 
                 img.abyss__content__media__image(data-src=media.image.url alt=media.image.alt)
@@ -35,10 +35,10 @@ block content
 
         if section.slice_type == 'informations'
           section.abyss__informations 
-            h2.abyss__informations__title=section.primary.title
+            h2.abyss__informations__title(data-animation="title")=section.primary.title
             .abyss__informations__main
               .abyss__informations__box 
-                .abyss__informations__desc=section.primary.description
+                .abyss__informations__desc(data-animation="paragraph")=section.primary.description
               .abyss__informations__mbox
                 figure.abyss__informations__mbox__media 
                   img.abyss__informations__mbox__media__image(data-src=section.primary.image.url alt=section.primary.image.alt)
@@ -46,9 +46,9 @@ block content
 
         if section.slice_type == 'footer'
           section.abyss__footer 
-            h2.abyss__footer__title=section.primary.title
+            h2.abyss__footer__title(data-animation="title")=section.primary.title
             .abyss__footer__box 
               each item in section.items 
-                p.abyss__footer__box__text=item.text
+                p.abyss__footer__box__text(data-animation="paragraph")=item.text
             hr.abyss__footer__hr
             h3.abyss__footer__subtitle=section.primary.subtitle

@@ -54,6 +54,7 @@
     "raw-loader": "^4.0.2",
     "sass": "^1.42.1",
     "sass-loader": "^12.1.0",
+    "scrollmagic": "^2.0.8",
     "terser-webpack-plugin": "^5.2.4",
     "v2": "^0.0.3",
     "webpack": "^5.55.1",

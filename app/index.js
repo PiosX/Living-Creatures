@@ -5,15 +5,23 @@ import Twilight from 'pages/Twilight';
 import Midnight from 'pages/Midnight';
 import Abyss from 'pages/Abyss';
 import Preloader from 'components/Preloader';
+import Navigation from 'components/Navigation';
 
 class App {
   constructor() {
-    this.createPreloader();
     this.createContent();
+    this.createPreloader();
+    this.createNavigation();
     this.createPages();
     this.addEventListeners();
     this.addLinkListeners();
     this.update();
+  }
+
+  createNavigation() {
+    this.navigation = new Navigation({
+      template: this.template,
+    });
   }
 
   createPreloader() {
@@ -58,7 +66,9 @@ class App {
 
       div.innerHTML = html;
       const divContent = div.querySelector('.content');
+
       this.template = divContent.getAttribute('data-template');
+      this.navigation.onChange(this.template);
 
       this.content.setAttribute('data-template', this.template);
       this.content.innerHTML = divContent.innerHTML;

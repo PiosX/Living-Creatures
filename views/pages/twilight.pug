@@ -10,42 +10,42 @@ block content
         if section.slice_label == 'border1'
           section.twilight__border
             each item in section.items
-              p.twilight__border__text=item.text
+              p.twilight__border__text(data-animation="paragraph")=item.text
               hr.twilight__border__hr
-              p.twilight__border__description=item.description
+              p.twilight__border__description(data-animation="paragraph")=item.description
 
         if section.slice_type == 'highlights'
           section.twilight__highlights 
-            h2.twilight__highlights__title=section.primary.title
-            p.twilight__highlights__text1=section.primary.text1
-            p.twilight__highlights__text2=section.primary.text2
+            h2.twilight__highlights__title(data-animation="title")=section.primary.title
+            p.twilight__highlights__text1(data-animation="paragraph")=section.primary.text1
+            p.twilight__highlights__text2(data-animation="paragraph")=section.primary.text2
 
         if section.slice_type == 'header'
           section.twilight__header 
             .twilight__header__box
-              p.twilight__header__text=section.primary.text
-              h1.twilight__header__title=section.primary.title 
-              p.twilight__header__subtitle=section.primary.subtitle
+              p.twilight__header__text(data-animation="paragraph")=section.primary.text
+              h1.twilight__header__title(data-animation="title")=section.primary.title 
+              p.twilight__header__subtitle(data-animation="paragraph")=section.primary.subtitle
 
         if section.slice_type == 'stats'
           section.twilight__stats 
-            p.twilight__stats__text1=section.primary.title1
-            p.twilight__stats__text2=section.primary.title2
+            p.twilight__stats__text1(data-animation="title")=section.primary.title1
+            p.twilight__stats__text2(data-animation="title")=section.primary.title2
             ul.twilight__stats__dlist 
               each item in section.items 
-                li.twilight__stats__dlist__item=item.dec
+                li.twilight__stats__dlist__item(data-animation="paragraph")=item.dec
             svg.twilight__stats__svgd(id="e4xSdzXEf0B1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="500" height="500" shape-rendering="geometricPrecision" text-rendering="geometricPrecision")
               path.twilight__stats__svgd__path(d="M132.562609,44.09646l53.639766,71.226574v57.157128l58.036468,43.087681.87934,29.018234l51.001745,53.639766l1.75868,33.414935l76.502616,27.259553l56.277787,32.535596" transform="translate(38.38919 22.233807)" fill="none" stroke="#000" stroke-width="1.28" stroke-linecap="round")
             ul.twilight__stats__ilist 
               each item in section.items 
-                li.twilight__stats__ilist__item=item.inc
+                li.twilight__stats__ilist__item(data-animation="paragraph")=item.inc
             svg.twilight__stats__svgi(id="e4xSdzXEf0B1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="500" height="500" shape-rendering="geometricPrecision" text-rendering="geometricPrecision")
               path.twilight__stats__svgi__path(d="M132.562609,44.09646l53.639766,71.226574v57.157128l58.036468,43.087681.87934,29.018234l51.001745,53.639766l1.75868,33.414935l76.502616,27.259553l56.277787,32.535596" transform="translate(38.38919 22.233807)" fill="none" stroke="#000" stroke-width="1.28" stroke-linecap="round")
-            p.twilight__stats__subtitle=section.primary.subtitle
+            p.twilight__stats__subtitle(data-animation="title")=section.primary.subtitle
 
         if section.slice_type == 'content'
           section.twilight__content
-            h2.twilight__content__title=section.primary.title
+            h2.twilight__content__title(data-animation="title")=section.primary.title
             each media in section.items 
               figure.twilight__content__media
                 img.twilight__content__media__image(data-src=media.image.url alt=media.image.alt)
@@ -53,9 +53,9 @@ block content
 
         if section.slice_type == 'informations'
           section.twilight__informations
-            h2.twilight__informations__title=section.primary.title
-            p.twilight__informations__border=section.primary.border
-            h2.twilight__informations__title2=section.primary.title2
+            h2.twilight__informations__title(data-animation="title")=section.primary.title
+            p.twilight__informations__border(data-animation="paragraph")=section.primary.border
+            h2.twilight__informations__title2(data-animation="title")=section.primary.title2
             .twilight__informations__box 
               img.twilight__informations__box__image(data-src=section.primary.image.url alt=section.primary.image.alt)
               ul.twilight__informations__box__list 
@@ -67,13 +67,13 @@ block content
         if section.slice_label == 'border2'
           section.twilight__border
             each item in section.items
-              p.twilight__border__text=item.text
+              p.twilight__border__text(data-animation="paragraph")=item.text
               hr.twilight__border__hr
-              p.twilight__border__description=item.description
+              p.twilight__border__description(data-animation="paragraph")=item.description
 
         if section.slice_type == 'footer'
           section.twilight__footer  
-            h3.twilight__footer__title=section.primary.title
-            p.twilight__footer__subtitle=section.primary.subtitle
+            h3.twilight__footer__title(data-animation="title")=section.primary.title
+            p.twilight__footer__subtitle(data-animation="paragraph")=section.primary.subtitle
             .twilight__informations__button
               a.twilight__informations__button__link(href='/midnight')="v"

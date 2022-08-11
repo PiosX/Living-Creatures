@@ -10,13 +10,13 @@ block content
         if section.slice_type == 'header'
           section.sunlight__header
             .sunlight__header__box
-              p.sunlight__header__text=section.primary.text
-              h1.sunlight__header__title=section.primary.title
-              p.sunlight__header__subtitle=section.primary.subtitle
+              p.sunlight__header__text(data-animation="paragraph")=section.primary.text
+              h1.sunlight__header__title(data-animation="title")=section.primary.title
+              p.sunlight__header__subtitle(data-animation="paragraph")=section.primary.subtitle
 
         if section.slice_type == 'highlights'
           section.sunlight__highlights 
-            h2.sunlight__highlights__title!=section.primary.title.replace(/\n/g, '<br>')
+            h2.sunlight__highlights__title(data-animation="title")!=section.primary.title.replace(/\n/g, '<br>')
             each media in section.items 
               figure.sunlight__highlights__media 
                 img.sunlight__highlights__media__image(data-src=media.image.url alt=media.image.alt)
@@ -24,7 +24,7 @@ block content
 
         if section.slice_type == 'content'
           section.sunlight__content 
-            h2.sunlight__content__title=section.primary.title
+            h2.sunlight__content__title(data-animation="title")=section.primary.title
             each media in section.items 
               figure.sunlight__content__media 
                 img.sunlight__content__media__image(data-src=media.image.url alt=media.image.alt)
@@ -32,22 +32,22 @@ block content
 
         if section.slice_type == 'border'
           section.sunlight__border 
-            p.sunlight__border__text=section.primary.text
+            p.sunlight__border__text(data-animation="paragraph")=section.primary.text
             hr.sunlight__border__hr
-            p.sunlight__border__description=section.primary.description
+            p.sunlight__border__description(data-animation="paragraph")=section.primary.description
 
         if section.slice_type == 'informations'
           section.sunlight__informations 
-            h2.sunlight__informations__title=section.primary.title
-            h3.sunlight__informations__subtitle=section.primary.subtitle
+            h2.sunlight__informations__title(data-animation="title")=section.primary.title
+            h3.sunlight__informations__subtitle(data-animation="title")=section.primary.subtitle
             .sunlight__informations__wrapper
               .sunlight__informations__box
-                p.sunlight__informations__border=section.primary.border
-                p.sunlight__informations__description=section.primary.description
+                p.sunlight__informations__border(data-animation="paragraph")=section.primary.border
+                p.sunlight__informations__description(data-animation="paragraph")=section.primary.description
               figure.sunlight__informations__media
                 figcaption.sunlight__informations__date=section.primary.date
                 img.sunlight__informations__image(data-src=section.primary.image.url alt=section.primary.image.alt)
                 figcaption.sunlight__informations__name=section.primary.name
-            p.sunlight__informations__subtext=section.primary.subtext
+            p.sunlight__informations__subtext(data-animation="title")=section.primary.subtext
             .sunlight__informations__button
               a.sunlight__informations__button__link(href='/twilight')="v"
